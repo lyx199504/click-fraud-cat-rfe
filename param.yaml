@@ -1,0 +1,102 @@
+# 文件夹
+dir:
+  model_dir: ./model  # 模型文件夹
+  log_dir: ./log  # 日志文件夹
+
+# 自定义超参数
+cus_param:
+  seed: 1  # 随机种子
+
+# 贝叶斯搜索超参数
+bys_param:
+  n_iter: 1  # 迭代次数
+  fold: 10  # 交叉验证折数
+  workers: 2  # 进程个数
+  scoring: accuracy  # 评分
+
+# 交叉验证参数
+cv_param:
+  fold: 10
+  workers: 2
+  scoring: accuracy  # 评分
+
+# 模型超参数
+model:
+#  - [xgboost, {
+#      n_estimators: [1747],
+#      max_depth: [13],
+#      learning_rate: [0.013677926454139228],
+#      colsample_bytree: [0.37085619084361215],
+#      min_child_weight: [3],
+#      random_state: [0],
+#  }]
+#  - [xgboost, {
+#      n_estimators: !!python/tuple [1000, 2000],
+#      max_depth: [13],
+#      learning_rate: !!python/tuple [0.01, 0.02, 'uniform'],
+#      colsample_bytree: !!python/tuple [0.3, 0.5, 'log-uniform'],
+#      min_child_weight: [3],
+#      random_state: !!python/tuple [1, 500],
+#  }]
+#  - [lightgbm, {
+#    learning_rate: 0.06492706394825098,
+#    max_depth: 24,
+#    num_leaves: 467,
+#    min_data_in_leaf: 15,
+#    feature_fraction: 0.5246606927256893,
+#    bagging_fraction: 0.7810579969777436,
+#    random_state: 30,
+#  }]
+#  - [lightgbm, {
+#    learning_rate: [0.06492706394825098],
+#    max_depth: [24],
+#    num_leaves: [467],
+#    min_data_in_leaf: [15],
+#    feature_fraction: [0.5246606927256893],
+#    bagging_fraction: [0.7810579969777436],
+#    random_state: [30],
+#  }]
+#  - [lightgbm, {
+#    learning_rate: !!python/tuple [0.05, 0.1, 'log-uniform'],
+#    max_depth: !!python/tuple [300, 500],
+#    num_leaves: !!python/tuple [300, 500],
+#    min_data_in_leaf: !!python/tuple [20, 40],
+#    feature_fraction: !!python/tuple [0.5, 0.9, 'log-uniform'],
+#    bagging_fraction: !!python/tuple [0.4, 0.6, 'log-uniform'],
+#    random_state: !!python/tuple [1, 500],
+#  }]
+  - [catboost, {
+      max_depth: [10],
+      learning_rate: [0.16361121636933942],
+      iterations: [200],
+      eval_metric: ['Accuracy'],
+      random_state: [247],
+  }]
+#  - [catboost, {
+#      max_depth: 10,
+#      learning_rate: 0.16361121636933942,
+#      iterations: 200,
+#      eval_metric: 'Accuracy',
+#      random_state: 247,
+#  }]
+#  - [catboost, {
+#      max_depth: !!python/tuple [10, 12],
+#      learning_rate: !!python/tuple [0.1, 0.3, 'log-uniform'],
+#      iterations: [200],
+#      eval_metric: ['Accuracy'],
+#      random_state: !!python/tuple [1, 500],
+#  }]
+#  - [catboost, {
+#      max_depth: !!python/tuple [6, 12],
+#      learning_rate: !!python/tuple [0.1, 0.5],
+#      iterations: [200],
+#      eval_metric: ['Accuracy'],
+#      loss_function: ['CrossEntropy', 'Logloss'],
+#      random_state: !!python/tuple [1, 500],
+#  }]
+#  - [gru, {
+#      learning_rate: [0.001],
+#      epochs: [30],
+#      batch_size: [100],
+#      random_state: !!python/tuple [1, 500],
+#  }]
