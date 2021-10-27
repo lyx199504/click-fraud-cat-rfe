@@ -237,8 +237,8 @@ def createNewDataset(trainData, testData):
         print("转换离散特征[%s]：共有%d个值" % (feat, len(set(dataset[feat]))))
         sizeDict[feat] = len(set(dataset[feat]))
 
-    # make_dir(FEATURE_DIR)
-    # write_json(FEATURE_DIR + "/size.dict", sizeDict)
+    make_dir(FEATURE_DIR)
+    write_json(FEATURE_DIR + "/size.dict", sizeDict)
 
     return trainData, testData
 
