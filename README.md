@@ -1,5 +1,5 @@
 # click-fraud-cat-rfe
-本项目是论文《CAT-RFE：一种点击欺诈的集成检测框架》的实验代码。
+本项目是论文《[CAT-RFE：点击欺诈的集成检测框架](http://www.infocomm-journal.com/cjnis/CN/10.11959/j.issn.2096-109x.2022065)》的实验代码。
 
 ## 目录
 
@@ -49,5 +49,6 @@ First, pull the project to the local.
 
 若要引用本论文，可采用如下引用格式：<br>
 
-    待定...
+    卢翼翔, 耿光刚, 延志伟, 朱效民, 张新常. CAT-RFE：点击欺诈的集成检测框架[J]. 网络与信息安全学报, 2022, 8(5): 158-166.
+    Yixiang LU, Guanggang GENG, Zhiwei YAN, Xiaomin ZHU, Xinchang ZHANG. CAT-RFE: ensemble detection framework for click fraud[J]. Chinese Journal of Network and Information Security, 2022, 8(5): 158-166.
 
